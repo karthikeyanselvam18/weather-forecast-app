@@ -5,23 +5,14 @@ import CityList from "./components/CityList";
 import WeatherDetails from "./components/WeatherDetails";
 
 function App() {
-  const [lat, setLat] = useState<number>(0);
-  const [lon, setLon] = useState<number>(0);
   return (
-    <div className="App flex flex-col items-center">
+    <div className="App flex flex-col items-center relative w-full">
       <BrowserRouter>
         <Routes>
+          <Route path="/" Component={CityList} />
           <Route
-            path="/"
-            Component={(props) => (
-              <CityList {...props} setLat={setLat} setLon={setLon} />
-            )}
-          />
-          <Route
-            path="/weather/:cityName"
-            Component={(props) => (
-              <WeatherDetails {...props} lat={lat} lon={lon} />
-            )}
+            path="/weather/:lat/:lon/:cityName"
+            Component={WeatherDetails}
           />
         </Routes>
       </BrowserRouter>

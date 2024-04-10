@@ -10,20 +10,21 @@ interface Weather {
   dt: Date;
 }
 
-export interface IWeatherDetailsProps {
-  lat: number;
-  lon: number;
-}
+export interface IWeatherDetailsProps {}
 
 function WeatherDetails(props: IWeatherDetailsProps) {
-  const { cityName } = useParams<{ cityName: string }>();
-  const location = useLocation();
+  let { lat, lon, cityName } = useParams<{
+    lat: string;
+    lon: string;
+    cityName: string;
+  }>();
+
   const API_KEY = process.env.REACT_APP_OPEN_WEATHER_API;
   const [forecastData, setForecastData] = useState<any[]>([]);
 
   useEffect(() => {
     fetch(
-      `https://api.openweathermap.org/data/2.5/forecast?lat=${props.lat}&lon=${props.lon}&appid=${API_KEY}`
+      `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`
     )
       .then((res) => res.json())
       .then((data) => {

@@ -10,19 +10,16 @@ interface City {
   lat: number;
   lon: number;
 }
-export interface IHeaderCityListProps {
-  setLat: any;
-  setLon: any;
-}
+export interface IHeaderCityListProps {}
 
 export default function HeaderCityList(props: IHeaderCityListProps) {
   const [cities, setCities] = useState<City[]>([]);
-  const [searchTerm, setSearchTerm] = useState<string>("");
+  // const [searchTerm, setSearchTerm] = useState<string>("");
   const navigate = useNavigate();
 
-  function fetchData() {
+  function fetchData(searchTerm: string) {
     fetch(
-      `https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/geonames-all-cities-with-a-population-1000/records?select=geoname_id%2C%20name%2C%20coordinates&where=search(name%2C%20%22${searchTerm}%22)&limit=20`
+      `https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/geonames-all-cities-with-a-population-1000/records?select=geoname_id%2C%20name%2C%20coordinates&where=search(name%2C%20%22${searchTerm}%22)&limit=20`,
     )
       .then((res) => res.json())
       .then((data) => {
@@ -33,29 +30,28 @@ export default function HeaderCityList(props: IHeaderCityListProps) {
               name: city.name,
               lat: city.coordinates.lat,
               lon: city.coordinates.lon,
-            }))
+            })),
           );
         }
       });
   }
 
   function handleOnSearch(string: string, results: any) {
-    setSearchTerm(string);
+    // setSearchTerm(string);
+    fetchData(string);
   }
 
   function handleOnSelect(item: City) {
-    props.setLat(item.lat);
-    props.setLon(item.lon);
-    navigate(`/weather/${item.name}`);
+    navigate(`/weather/${item.lat}/${item.lon}/${item.name}`);
   }
 
-  useEffect(() => {
-    fetchData();
-  }, [searchTerm]);
+  // useEffect(() => {
+  //   fetchData();
+  // }, [searchTerm]);
 
   return (
-    <header className="w-full flex flex-col md:flex-row items-center justify-between p-5 bg-cyan-600 gap-5 md:gap-0">
-      <div className="flex gap-3 items-center">
+    <header className="sticky left-0 top-0 z-20 mb-1 flex w-full flex-col items-center justify-between gap-5 bg-cyan-600 p-5 md:flex-row md:gap-0">
+      <div className="flex items-center gap-3">
         <h1 className="text-3xl font-bold text-white">Weather Forecast</h1>
         <FontAwesomeIcon icon={faSmog} className="text-4xl text-white" />
       </div>
@@ -64,7 +60,6 @@ export default function HeaderCityList(props: IHeaderCityListProps) {
           items={cities}
           onSearch={handleOnSearch}
           onSelect={handleOnSelect}
-          autoFocus
         />
       </div>
     </header>
