@@ -18,7 +18,7 @@ export interface IWeatherDetailsProps {
 function WeatherDetails(props: IWeatherDetailsProps) {
   const { cityName } = useParams<{ cityName: string }>();
   const location = useLocation();
-  const API_KEY = "dfa74fc59739c6503603249484489033";
+  const API_KEY = process.env.REACT_APP_OPEN_WEATHER_API;
   const [forecastData, setForecastData] = useState<any[]>([]);
 
   useEffect(() => {
@@ -77,7 +77,7 @@ function WeatherDetails(props: IWeatherDetailsProps) {
                 className="flex flex-col justify-center items-center gap-2"
               >
                 <span className="font-semibold">
-                  {index == 0
+                  {index === 0
                     ? "Now"
                     : `${new Date(data.dt_txt)
                         .getDate()

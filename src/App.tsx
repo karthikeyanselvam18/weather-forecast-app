@@ -8,7 +8,7 @@ function App() {
   const [lat, setLat] = useState<number>(0);
   const [lon, setLon] = useState<number>(0);
   return (
-    <div className="App flex justify-center">
+    <div className="App flex flex-col items-center">
       <BrowserRouter>
         <Routes>
           <Route
