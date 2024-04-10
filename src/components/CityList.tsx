@@ -55,7 +55,7 @@ function CityList(props: ICityListProps) {
 
   return (
     <>
-      <HeaderCityList />
+      <HeaderCityList setLat={props.setLat} setLon={props.setLon} />
       <InfiniteScroll
         dataLength={cities.length}
         next={fetchData}
