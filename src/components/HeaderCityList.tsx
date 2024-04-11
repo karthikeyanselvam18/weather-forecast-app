@@ -1,4 +1,4 @@
-import { faSmog } from "@fortawesome/free-solid-svg-icons";
+import { faSmog, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import { useNavigate } from "react-router-dom";
@@ -10,7 +10,7 @@ interface City {
   lat: number;
   lon: number;
 }
-export interface IHeaderCityListProps {}
+export interface IHeaderCityListProps {setIsMenuOpen:any;isMenuOpen:boolean}
 
 export default function HeaderCityList(props: IHeaderCityListProps) {
   const [cities, setCities] = useState<City[]>([]);
@@ -39,6 +39,7 @@ export default function HeaderCityList(props: IHeaderCityListProps) {
   function handleOnSearch(string: string, results: any) {
     // setSearchTerm(string);
     fetchData(string);
+    
   }
 
   function handleOnSelect(item: City) {
@@ -50,17 +51,19 @@ export default function HeaderCityList(props: IHeaderCityListProps) {
   // }, [searchTerm]);
 
   return (
-    <header className="sticky left-0 top-0 z-20 mb-1 flex w-full flex-col items-center justify-between gap-5 bg-cyan-600 p-5 md:flex-row md:gap-0">
+    <header className="flex justify-between items-center sticky left-0 top-0 z-30 w-full bg-cyan-600 p-5  md:gap-0 ">
       <div className="flex items-center gap-3">
-        <h1 className="text-3xl font-bold text-white">Weather Forecast</h1>
-        <FontAwesomeIcon icon={faSmog} className="text-4xl text-white" />
-      </div>
-      <div className="w-3/4 md:w-1/3 ">
-        <ReactSearchAutocomplete
-          items={cities}
-          onSearch={handleOnSearch}
-          onSelect={handleOnSelect}
+        <h1 className="text-2xl font-bold text-white sm:text-3xl">
+          Weather Forecast
+        </h1>
+        <FontAwesomeIcon
+          icon={faSmog}
+          className="text-2xl text-white sm:text-4xl"
         />
+      </div>
+      <div className="md:hidden flex justify-center items-center me-5 cursor-pointer" 
+      onClick={()=>props.setIsMenuOpen((prev: boolean)=> !prev)}>
+        <FontAwesomeIcon icon={props.isMenuOpen? faXmark :faBars} className="text-2xl font-bold text-white sm:text-4xl"/>
       </div>
     </header>
   );
