@@ -217,7 +217,7 @@ function CityList(props: ICityListProps) {
 
         <div className="mx-auto w-11/12 rounded border-x-2 border-b-2 border-slate-600 md:mx-0 md:w-9/12   ">
           <div className="sticky top-[72px] grid w-full grid-cols-12 divide-x-2 divide-slate-600 rounded border-y-2 border-slate-600 bg-cyan-500 text-center font-semibold sm:top-[76px] md:top-[76px]">
-            <h1 className="col-span-1 py-2">No.</h1>
+            <h1 className="col-span-2 py-2">No.</h1>
             <h1
               className="col-span-4 cursor-pointer py-2"
               onClick={handleNameSort}
@@ -229,7 +229,7 @@ function CityList(props: ICityListProps) {
               )}
             </h1>
             <h1
-              className="col-span-4 cursor-pointer py-2"
+              className="col-span-3 cursor-pointer py-2"
               onClick={handleCountrySort}
             >
               Country{" "}
@@ -289,7 +289,7 @@ function CityList(props: ICityListProps) {
                 className="grid grid-cols-12 divide-x-2 divide-slate-600 border-b border-slate-600
               bg-gray-300 odd:bg-slate-200 "
               >
-                <span className="col-span-1 break-words py-1 ps-2">
+                <span className="col-span-2  py-1 ps-2">
                   {index + 1}.
                 </span>
                 <span className="col-span-4 break-words py-1 ps-2">
@@ -300,7 +300,7 @@ function CityList(props: ICityListProps) {
                     {city.name}
                   </Link>
                 </span>
-                <span className="col-span-4 break-words py-1 ps-2">
+                <span className="col-span-3 break-words py-1 ps-2">
                   {city.cou_name_en}
                 </span>
                 <span className="col-span-3 break-words py-1 ps-2">
