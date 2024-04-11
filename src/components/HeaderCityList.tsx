@@ -49,6 +49,7 @@ export default function HeaderCityList(props: IHeaderCityListProps) {
   // useEffect(() => {
   //   fetchData();
   // }, [searchTerm]);
+  
 
   return (
     <header className="flex justify-between items-center sticky left-0 top-0 z-30 w-full bg-cyan-600 p-5  md:gap-0 ">

@@ -129,15 +129,13 @@ function WeatherDetails(props: IWeatherDetailsProps) {
   };
 
   const getTempIcon = (temp: number) => {
-    let tempIcon = faTemperatureHalf;
+  
     const tempInCelcius = (temp - 273.15).toFixed(2);
-    if (temp <= -10) tempIcon = faTemperatureEmpty;
-    if (temp > -10 && temp <= 10) tempIcon = faTemperatureQuarter;
-    if (temp >= 10 && temp <= 30) tempIcon = faTemperatureHalf;
+   
     return (
       <>
-        {tempInCelcius}&deg;
-        <FontAwesomeIcon icon={tempIcon} />
+        {tempInCelcius}&deg;C
+        
       </>
     );
   };
