@@ -1,46 +1,109 @@
-# Getting Started with Create React App
+<div align='center'>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p>This is a weather forecast web application built with React, TypeScript, and Tailwind CSS. The app utilizes data from the GeoNames API to retrieve city names and the OpenWeather API to fetch current weather conditions and a 5-day forecast for selected cities.</p>
 
-## Available Scripts
+<h4> <a href=https://ks18-portfolio.netlify.app/>View Demo</a> <span> · </span> <a href="https://github.com/karthikeyanselvam18/weather-forecast-app/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/karthikeyanselvam18/weather-forecast-app/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/karthikeyanselvam18/weather-forecast-app/issues"> Request Feature </a> </h4>
 
-In the project directory, you can run:
 
-### `npm start`
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# :notebook_with_decorative_cover: Table of Contents
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [About the Project](#star2-about-the-project)
+- [Contact](#handshake-contact)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## :star2: About the Project
+### :space_invader: Tech Stack
+<details> <summary>Client</summary> <ul>
+<li><a href="https://react.dev/">React</a></li>
+<li><a href="https://tailwindcss.com/">Tailwind CSS</a></li>
+<li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
+</ul> </details>
 
-### `npm run build`
+### :dart: Features
+- City Selection
+- Weather Display
+- Search Functionality
+- Filter Option
+- Infinite Scroll
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### :art: Color Reference
+| Color | Hex |
+| --------------- | ---------------------------------------------------------------- |
+| Primary Color | ![#393E46](https://via.placeholder.com/10/393E46?text=+) #393E46 |
+| Secondary Color | ![#393E46](https://via.placeholder.com/10/393E46?text=+) #393E46 |
+| Accent Color | ![#00ADB5](https://via.placeholder.com/10/00ADB5?text=+) #00ADB5 |
+| Text Color | ![#EEEEEE](https://via.placeholder.com/10/EEEEEE?text=+) #EEEEEE |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## :toolbox: Getting Started
 
-### `npm run eject`
+### :bangbang: Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Node.js and npm installed on your local machine. You can download and install Node.js<a href="https://nodejs.org/"> Here</a>
+```bash
+npm install
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### :gear: Installation
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Clone the repository:
+```bash
+git clone https://github.com/karthikeyanselvam18/weather-forecast-app.git
+```
+Navigate to the project directory:
+```bash
+cd weather-forecast-app
+```
+Install dependencies:
+```bash
+npm install
+```
+Set up environment variables:
 
-## Learn More
+Create a `.env` file in the root directory of the project. Add your API keys to the `.env` file
+```bash
+REACT_APP_OPEN_WEATHER_API=your_openweather_api_key
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### :running: Run Locally
+
+Clone the project
+
+```bash
+https://github.com/karthikeyanselvam18/weather-forecast-app
+```
+Go to the project directory
+```bash
+cd weather-forecast-app
+```
+Install dependencies
+```bash
+npm install
+```
+Start the server
+```bash
+npm start
+```
+Open in browser
+```bash
+Open your browser and navigate to http://localhost:3000 to view the app.
+```
+
+
+### :triangular_flag_on_post: Deployment
+
+To deploy this project run
+```bash
+npm run build
+```
+
+
+## :handshake: Contact
+
+Karthikeyan Selvam - - karthikeyanselvam18@gmail.com
+
+Project Link: [https://github.com/karthikeyanselvam18/weather-forecast-app](https://github.com/karthikeyanselvam18/weather-forecast-app)
