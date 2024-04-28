@@ -36,7 +36,7 @@
 
 ## 🌐 Live ##
 
-Click here to see <a href="https://ks18-weather-forecast.netlify.app/">live page</a> 
+Click here to see <a href="https://ks18-weather-forecast.netlify.app/" target="_blank">live page</a> 
 
 ## :dart: About ##
 
