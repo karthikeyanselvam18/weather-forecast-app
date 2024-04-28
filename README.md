@@ -1,12 +1,4 @@
-<div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Weather Forecast App" />
-
-  &#xa0;
-
-  <!-- <a href="https://weatherforecastapp.netlify.app">Demo</a> -->
-</div>
-
-<h1 align="center">Weather Forecast App</h1>
+<h1 align="center" id="top">Weather Forecast App</h1>
 
 <p align="center">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/karthikeyanselvam18/weather-forecast-app?color=56BEB8">
@@ -43,6 +35,10 @@
 </p>
 
 <br>
+
+## 🌐 Live ##
+
+Click here to see <a href="https://ks18-weather-forecast.netlify.app/">live page</a> 
 
 ## :dart: About ##
 
@@ -87,10 +83,7 @@ $ npm start
 # The server will initialize in the <http://localhost:3000>
 ```
 
-## :memo: License ##
-
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
-
+## :memo: Author ##
 
 Made with :heart: by <a href="https://github.com/karthikeyanselvam18" target="_blank">Karthikeyan Selvam</a>
 
