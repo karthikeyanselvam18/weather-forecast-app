@@ -34,8 +34,6 @@
   <a href="https://github.com/karthikeyanselvam18" target="_blank">Author</a>
 </p>
 
-<br>
-
 ## 🌐 Live ##
 
 Click here to see <a href="https://ks18-weather-forecast.netlify.app/">live page</a> 
